@@ -1,0 +1,1 @@
+{"version":3,"sources":["src/assets/app.js"],"names":[],"mappings":"AAAA","file":"scripts.js","sourcesContent":["console.log(\"hello custome js\");\r\n\r\n"],"sourceRoot":"webpack:///"}

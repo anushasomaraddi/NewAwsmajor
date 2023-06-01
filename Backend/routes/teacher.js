@@ -1,0 +1,118 @@
+var express = require("express");
+var router = express.Router();
+const teacherController = require("../controller/teacherController");
+
+router.post(
+  "/createquiz",
+  teacherController.verifyToken,
+  teacherController.createQuiz
+);
+router.get(
+  "/getuploadquiz",
+  teacherController.verifyToken,
+  teacherController.getUploadquiz
+);
+router.get(
+  "/gethomequiz",
+  teacherController.verifyToken,
+  teacherController.getHomequiz
+);
+router.get(
+  "/seestudent",
+  teacherController.verifyToken,
+  teacherController.seeStudent
+);
+router.delete(
+  "/blockuser/:id",
+  teacherController.verifyToken,
+  teacherController.blockStudent
+);
+router.delete(
+  "/unblockuser/:id",
+  teacherController.verifyToken,
+  teacherController.unblockStudent
+);
+router.delete(
+  "/deletequiz/:id",
+  teacherController.verifyToken,
+  teacherController.deleteQuiz
+);
+router.post(
+  "/uploadquiz",
+  teacherController.verifyToken,
+  teacherController.uploadQuiz
+);
+router.post(
+  "/addquestion",
+  teacherController.verifyToken,
+  teacherController.addQuestion
+);
+router.get(
+  "/getallquestion/:id",
+  teacherController.verifyToken,
+  teacherController.getAllQuestion
+);
+router.delete(
+  "/deletequestion/:id",
+  teacherController.verifyToken,
+  teacherController.deleteQuestion
+);
+
+//cta
+
+router.post(
+  "/createCTA",
+  teacherController.verifyToken,
+  teacherController.createCTA
+);
+router.get(
+  "/getuploadques",
+  teacherController.verifyToken,
+  teacherController.getUploadques
+);
+router.get(
+  "/gethomeques",
+  teacherController.verifyToken,
+  teacherController.getHomeques
+);
+router.get(
+  "/seestudentcta",
+  teacherController.verifyToken,
+  teacherController.seeStudentcta
+);
+router.delete(
+  "/blockusercta/:id",
+  teacherController.verifyToken,
+  teacherController.blockStudentcta
+);
+router.delete(
+  "/unblockusercta/:id",
+  teacherController.verifyToken,
+  teacherController.unblockStudentcta
+);
+router.delete(
+  "/deleteques/:id",
+  teacherController.verifyToken,
+  teacherController.deleteques
+);
+router.post(
+  "/uploadques",
+  teacherController.verifyToken,
+  teacherController.uploadques
+);
+router.post(
+  "/addquestioncta",
+  teacherController.verifyToken,
+  teacherController.addQuestioncta
+);
+router.get(
+  "/getallquestioncta/:id",
+  teacherController.verifyToken,
+  teacherController.getAllQuestioncta
+);
+router.delete(
+  "/deletequestioncta/:id",
+  teacherController.verifyToken,
+  teacherController.deleteQuestioncta
+);
+module.exports = router;

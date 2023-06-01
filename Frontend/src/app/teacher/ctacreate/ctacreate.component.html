@@ -1,0 +1,44 @@
+<app-teachernav></app-teachernav>
+
+<div class="container mt-5">
+  <form #f="ngForm" (ngSubmit)="createCta(f)">
+    <div class="form-group">
+      <label for="quizname">Question Title</label>
+      <input
+        type="text"
+        name="quesname"
+        class="form-control"
+        autocomplete="off"
+        id="quesname"
+        ngModel
+        required
+        #quizname="ngModel"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        autocomplete="off"
+        name="quesdescription"
+        id="quesdescription"
+        ngModel
+        required
+        #description="ngModel"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+      Create
+    </button>
+  </form>
+  <p
+    class="social-text"
+    style="color: red; font-weight: bold; font-size: 20px"
+    *ngIf="avail"
+  >
+    {{ msg }}
+  </p>
+</div>
